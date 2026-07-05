@@ -1,25 +1,17 @@
 function convertToRoman(num) {
-  	let value[]={1000,500,100,50,10,5,1};
-	let symbol[] = {'M','D','C','L','X','V','I'};
+    let value = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+    let symbol = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
 
-	let result="";
-	
-	for(let i=0;i<nums.length;i++){
-		if(num >= value[i]){
-			result += symbol[i]);
-		}
-		num = num-value[i];
-	}
-	return result;
-  //your code here
+    let result = "";
 
+    for (let i = 0; i < value.length; i++) {
+        while (num >= value[i]) {
+            result += symbol[i];
+            num -= value[i];
+        }
+    }
+
+    return result;
 }
-// You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-console.log(convertToRoman(36));
-
-
-
-
-// do not edit below this line
-module.exports = convertToRoman
+console.log(convertToRoman(36)); 
