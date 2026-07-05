@@ -2,15 +2,15 @@ function convertToRoman(num) {
   	let value[]={1000,500,100,50,10,5,1};
 	let symbol[] = {'M','D','C','L','X','V','I'};
 
-	stringBuilder sb = new StringBuilder();
+	let result="";
 	
 	for(let i=0;i<nums.length;i++){
 		if(num >= value[i]){
-			sb.append(symbol[i]);
+			result += symbol[i]);
 		}
 		num = num-value[i];
 	}
-	return sb.toString();
+	return result;
   //your code here
 
 }
